@@ -1,0 +1,97 @@
+/*
+  Completely biased CSS setup. Based of multiple sources.
+  Literature:
+  https://github.com/seanpowell/Email-Boilerplate
+  https://github.com/mailchimp/Email-Blueprints
+  https://github.com/mrprkr/eDM-Compiler/
+  http://www.campaignmonitor.com/blog/post/3457/media-query-issues-in-yahoo-mail-mobile-email/
+
+  Also: https://github.com/ashaffer/gulp-inline
+*/
+
+
+
+// Reset
+#outlook a {
+  padding:0; //Force Outlook to provide a "view in browser" menu link. 
+}
+
+ //Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design.
+body{
+  width:100% !important;
+  -webkit-text-size-adjust:100%;
+  -ms-text-size-adjust:100%;
+  margin:0;
+  padding:0;
+}
+
+.ExternalClass{
+  width:100%;  // Force Hotmail to display emails at full width
+  &,
+  p,
+  span,
+  font,
+  td,
+  div {
+    line-height: 100%; //Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/
+  }
+}
+
+#backgroundTable {
+  margin:0;
+  padding:0;
+  width:100% !important;
+  line-height: 100% !important;
+}
+// End reset
+
+img {
+  outline:none;
+  text-decoration:none;
+  -ms-interpolation-mode: bicubic;
+  a &{
+    border: none;
+  }
+}
+.image_fix {
+  display:block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: black !important;
+  a{
+    color: blue !important;
+    &:active{
+      color: red !important;
+    }
+    &:visited{
+      color: purple !important;
+    }
+  }
+}
+
+
+p {
+  margin: 1em 0;
+}
+a {
+  color: orange;
+  &:link{
+    color: orange;
+  }
+  &:visited{
+    color: blue;
+  }
+  &:hover{
+    color: green;
+  }
+}
+
+table {
+  border-collapse:collapse;
+  mso-table-lspace:0pt;
+  mso-table-rspace:0pt;
+  td {
+    border-collapse: collapse;
+  }
+}

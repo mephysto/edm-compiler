@@ -1,0 +1,61 @@
+
+@import 'reset';
+
+/* Author styles */
+
+
+
+/* 
+  Mobile responsive
+
+  ! Still figuring out this part. Should go in head, or inline on elements?
+
+  NOTE: To properly use @media queries and play nice with yahoo mail, use attribute selectors in place of class, id declarations.
+  table[class=classname]
+*/
+
+// small devices
+@media only screen and (max-device-width: 480px) {
+
+  /* Make phone/txt numbers pretty? */
+  a{
+    &[href^="tel"], 
+    &[href^="sms"] {
+      text-decoration: none;
+      color: black;
+      pointer-events: none;
+      cursor: default;
+      .mobile_link &{
+        text-decoration: default;
+        color: orange !important;
+        pointer-events: auto;
+        cursor: default;
+      }
+    }
+  }
+}
+
+
+// larger devices, (ipad, tablets, etc)
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Make phone/txt numbers pretty? */
+  a{
+    &[href^="tel"], 
+    &[href^="sms"] {
+      text-decoration: none;
+      color: black;
+      pointer-events: none;
+      cursor: default;
+      .mobile_link &{
+        text-decoration: default;
+        color: orange !important;
+        pointer-events: auto;
+        cursor: default;
+      }
+    }
+  }
+}
+
+// iPhone 4x styles */
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+}
